@@ -1,0 +1,1 @@
+print("My name is Mahmoud Tarek, 25 years old egyptian citizen, I want to improve my python and programming skills in general along this course")
