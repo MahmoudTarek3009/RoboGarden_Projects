@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul, ol {
+            margin: 10px 0;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block; /* Make the links block-level for vertical alignment */
+            width: 200px; /* Set a fixed width for the buttons */
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="email"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with name -->
+    <header>
+        <h1>John Doe's Online Portfolio</h1>
+    </header>
+
+    <!-- About Me Section -->
+    <section>
+        <h2>About Me</h2>
+        <p><strong>Date of Birth:</strong> September 9, 1999</p>
+        <p><strong>Education:</strong> Bachelor's in Computer Science, ASU University</p>
+        <p><strong>Previous Projects:</strong> 
+            <ul>
+                <li>Project Management System</li>
+                <li>Online Store Website</li>
+                <li>Weather Forecast App</li>
+            </ul>
+        </p>
+        <p><strong>Current Job:</strong> Software Tester at METI.</p>
+        <p><strong>Languages Spoken:</strong>
+            <ul>
+                <li>English</li>
+                <li>Deutch</li>
+                <li>Arabic</li>
+            </ul>
+        </p>
+        <p><strong>Activities:</strong> 
+            <ul>
+                <li>Volunteer at Local Shelter</li>
+                <li>Fitness Enthusiast</li>
+                <li>Amateur Photographer</li>
+            </ul>
+        </p>
+    </section>
+
+    <!-- Previous Projects with buttons -->
+    <section>
+        <h2>Previous Projects</h2>
+        <ul>
+            <li>
+                Project 1: Project Management System
+                <a href="project1.html" class="btn" target="_blank">View Project</a>
+            </li>
+            <li>
+                Project 2: Online Store Website
+                <a href="project2.html" class="btn" target="_blank">View Project</a>
+            </li>
+            <li>
+                Project 3: Weather Forecast App
+                <a href="project3.html" class="btn" target="_blank">View Project</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Courses Section -->
+    <section>
+        <h2>Courses</h2>
+        <ol>
+            <li>Web Development Bootcamp - 2022</li>
+            <li>Data Science with Python - 2021</li>
+            <li>Machine Learning Fundamentals - 2020</li>
+            <li>Intro to JavaScript - 2025</li>
+        </ol>
+    </section>
+
+    <!-- Webform -->
+    <section>
+        <h2>Contact Form</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="request">Request:</label>
+            <textarea id="request" name="request" rows="4" required></textarea>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+</body>
+</html>

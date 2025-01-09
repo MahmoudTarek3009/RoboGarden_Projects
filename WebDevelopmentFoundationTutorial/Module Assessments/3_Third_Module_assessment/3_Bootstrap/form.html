@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Add Task</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Add Task</h2>
+    <form>
+        <!-- Title input -->
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" class="form-control" />
+        </div>
+
+        <!-- Description input -->
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" rows="3" class="form-control"></textarea>
+        </div>
+
+        <!-- Category input -->
+        <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" id="category" class="form-control" />
+        </div>
+
+        <!-- Priority Level select -->
+        <div class="form-group">
+            <label for="priority">Priority Level</label>
+            <select id="priority" class="form-control">
+                <option>Select an item</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+        </div>
+
+        <!-- Progress Level select -->
+        <div class="form-group">
+            <label for="progress">Progress Level</label>
+            <select id="progress" class="form-control">
+                <option>Select an item</option>
+                <option>Not Started</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+            </select>
+        </div>
+
+        <!-- Submit button -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

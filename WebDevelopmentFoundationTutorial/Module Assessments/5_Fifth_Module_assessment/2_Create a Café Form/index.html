@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Order Form</title>
+    <script type="text/javascript">
+        function calculateOrder() {
+            // Get the customer's name
+            var name = document.getElementById("name").value;
+
+            // Get the selected coffee type and its price
+            var coffeeType = document.querySelector('input[name="coffeeType"]:checked');
+            var coffeePrice = 0;
+            if (coffeeType) {
+                if (coffeeType.value === "turkish") coffeePrice = 3;
+                else if (coffeeType.value === "american") coffeePrice = 5;
+                else if (coffeeType.value === "icedLatte") coffeePrice = 7;
+            }
+
+            // Get selected extras and their prices
+            var extrasPrice = 0;
+            var extras = document.querySelectorAll('input[name="extras"]:checked');
+            extras.forEach(function(extra) {
+                if (extra.value === "extraCoffee") extrasPrice += 1.5;
+                if (extra.value === "whippedCream") extrasPrice += 2;
+                if (extra.value === "caramel") extrasPrice += 3;
+            });
+
+            // Get the selected size and its price
+            var size = document.getElementById("size").value;
+            var sizePrice = 0;
+            if (size === "small") sizePrice = 1.5;
+            else if (size === "medium") sizePrice = 2.5;
+            else if (size === "large") sizePrice = 3.5;
+
+            // Calculate total price
+            var totalPrice = coffeePrice + extrasPrice + sizePrice;
+
+            // Display the summary
+            var summary = "Order Summary:\n" +
+                "Customer Name: " + name + "\n" +
+                "Coffee Type: " + coffeeType.labels[0].textContent + "\n" +
+                "Extras: ";
+            extras.forEach(function(extra) {
+                summary += extra.labels[0].textContent + ", ";
+            });
+            summary = summary.slice(0, -2); // Remove last comma
+            summary += "\nSize: " + document.querySelector('option[value="' + size + '"]').textContent + "\n";
+            summary += "Total Price: $" + totalPrice.toFixed(2);
+
+            // Display the summary in the paragraph
+            document.getElementById("orderSummary").textContent = summary;
+        }
+    </script>
+</head>
+<body>
+    <h1>Café Order Form</h1>
+    <form onsubmit="event.preventDefault(); calculateOrder();">
+        <!-- Name Input -->
+        <label for="name">Customer Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Coffee Type (Radio Buttons) -->
+        <p>Which coffee do you want to order?</p>
+        <input type="radio" id="turkish" name="coffeeType" value="turkish" required>
+        <label for="turkish">Turkish coffee ($3)</label><br>
+        <input type="radio" id="american" name="coffeeType" value="american">
+        <label for="american">American coffee ($5)</label><br>
+        <input type="radio" id="icedLatte" name="coffeeType" value="icedLatte">
+        <label for="icedLatte">Iced latte ($7)</label><br><br>
+
+        <!-- Extras (Checkboxes) -->
+        <p>Do you need any extras?</p>
+        <input type="checkbox" id="extraCoffee" name="extras" value="extraCoffee">
+        <label for="extraCoffee">Extra coffee ($1.50)</label><br>
+        <input type="checkbox" id="whippedCream" name="extras" value="whippedCream">
+        <label for="whippedCream">Whipped cream ($2)</label><br>
+        <input type="checkbox" id="caramel" name="extras" value="caramel">
+        <label for="caramel">Caramel ($3)</label><br><br>
+
+        <!-- Size (Dropdown) -->
+        <label for="size">What size?</label>
+        <select id="size" name="size" required>
+            <option value="small">Small ($1.50)</option>
+            <option value="medium">Medium ($2.50)</option>
+            <option value="large">Large ($3.50)</option>
+        </select><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Order Summary Paragraph -->
+    <h2>Order Summary:</h2>
+    <p id="orderSummary"></p>
+</body>
+</html>

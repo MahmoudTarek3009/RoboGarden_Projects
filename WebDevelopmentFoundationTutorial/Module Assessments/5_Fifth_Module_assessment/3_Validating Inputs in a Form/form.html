@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <h1>Order Form</h1>
+    <form id="orderForm">
+        <!-- Input fields with unique IDs -->
+        <label for="name">Customer Name:</label>
+        <input id="name" type="text" class="form-control" /><br><br>
+
+        <label for="coffee">Coffee Type:</label>
+        <input id="coffee" type="text" class="form-control" /><br><br>
+
+        <label for="size">Size:</label>
+        <input id="size" type="text" class="form-control" /><br><br>
+
+        <label for="extras">Extras:</label>
+        <input id="extras" type="text" class="form-control" /><br><br>
+
+        <!-- Submit Button with an onclick event to trigger the validateInputs function -->
+        <button type="submit" onclick="validateInputs(event)">Submit</button>
+    </form>
+
+    <script type="text/javascript">
+        // Function to validate input fields
+        function validateInputs(event) {
+            // Prevent form from submitting immediately
+            event.preventDefault();
+
+            // Get the value of each input field using getElementById()
+            var name = document.getElementById('name').value;
+            var coffee = document.getElementById('coffee').value;
+            var size = document.getElementById('size').value;
+            var extras = document.getElementById('extras').value;
+
+            // Check if any input field is empty
+            if (name === "") {
+                alert("Customer Name is empty");
+            } else if (coffee === "") {
+                alert("Coffee Type is empty");
+            } else if (size === "") {
+                alert("Size is empty");
+            } else if (extras === "") {
+                alert("Extras is empty");
+            } else {
+                alert("All fields are filled! Proceeding with submission...");
+                // Optionally submit the form if everything is validated
+                document.getElementById("orderForm").submit();
+            }
+        }
+    </script>
+</body>
+</html>

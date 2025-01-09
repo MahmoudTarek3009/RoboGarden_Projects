@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Task</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 50%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Create a New Task</h1>
+    <form action="tasks.html" method="GET">
+        <label for="title">Task Title</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="description">Task Description</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Study">Study</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="priority">Priority Level</label>
+        <select id="priority" name="priority" required>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+
+        <label for="progress">Progress Level</label>
+        <select id="progress" name="progress" required>
+            <option value="Not Started">Not Started</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+        </select>
+
+        <input type="submit" value="Submit Task">
+    </form>
+
+</body>
+</html>

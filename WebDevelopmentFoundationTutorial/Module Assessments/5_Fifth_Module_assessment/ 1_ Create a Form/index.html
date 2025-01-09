@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <script type="text/javascript">
+        // Function that gets the name and shows an alert
+        function greetUser() {
+            // Get the value entered in the input field
+            var name = document.getElementById("name").value;
+
+            // Display an alert with the entered name
+            alert("Hello, " + name + "!");
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter Your Name</h1>
+
+    <!-- Input field for the user's name -->
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <!-- Button that triggers the greetUser function -->
+    <button type="button" onclick="greetUser()">Submit</button>
+</body>
+</html>

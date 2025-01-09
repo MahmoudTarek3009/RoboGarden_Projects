@@ -1,0 +1,38 @@
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Profile image styling */
+.profile-img {
+    border: 2px solid black;
+    width: 100%;
+    max-width: 500px;
+    min-width: 100px;
+}
+
+/* Styling for all <p> tags */
+p {
+    color: blue;
+    font-style: italic;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-style: solid;
+    background-color: lightgrey;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Special styling for the "About Me" paragraph */
+.about-me {
+    color: lightgreen;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-style: italic;
+    border-style: dashed;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightyellow;
+}

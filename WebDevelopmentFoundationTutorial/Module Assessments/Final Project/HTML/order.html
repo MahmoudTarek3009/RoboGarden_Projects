@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order</title>
+    <link rel="stylesheet" href="../CSS/order.css">
+    <script src="../JS/order.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Order Your Coffee</h1>
+    </header>
+    <form id="order-form">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" required><br><br>
+
+        <label>Choose Coffee Type:</label><br>
+        <input type="radio" name="coffee" value="Turkish Coffee" required> Turkish Coffee $3<br>
+        <input type="radio" name="coffee" value="American Coffee" required> American Coffee $5<br>
+        <input type="radio" name="coffee" value="Iced Latte" required> Iced Latte $7<br><br>
+
+        <label>Extras:</label><br>
+        <input type="checkbox" name="extras" value="Extra Coffee $1.50"> Extra Coffee $1.50<br>
+        <input type="checkbox" name="extras" value="Whipped Cream $2"> Whipped Cream $2<br>
+        <input type="checkbox" name="extras" value="Caramel $3"> Caramel $3<br><br>
+
+        <label for="size">Choose Size:</label>
+        <select name="size" id="size" required>
+            <option value="Small">Small $1.50</option>
+            <option value="Medium">Medium $2.50</option>
+            <option value="Large">Large $3.50</option>
+        </select><br><br>
+
+        <button type="submit">Submit Order</button>
+    </form>
+
+    <h2>Your Order Summary:</h2>
+    <p id="order-summary"></p>
+</body>
+</html>

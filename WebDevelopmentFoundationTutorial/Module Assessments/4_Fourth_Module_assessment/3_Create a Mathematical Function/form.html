@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum the Numbers Between 1 and 100</title>
+</head>
+<body>
+    <h1>Sum the numbers between 1 and 100</h1>
+
+    <form>
+        <!-- Button triggers the sumNumbers function on click -->
+        <button type="button" onclick="sumNumbers()">Submit</button>
+    </form>
+
+    <!-- Include the script for the function -->
+    <script type="text/javascript">
+        // JavaScript function to sum numbers between 1 and 100
+        function sumNumbers() {
+            let sum = 0;
+            
+            // Loop through numbers from 1 to 100 and sum them up
+            for (let i = 1; i <= 100; i++) {
+                sum += i;
+            }
+            
+            // Output the result to the console
+            console.log("The sum of numbers from 1 to 100 is: " + sum);
+        }
+    </script>
+</body>
+</html>

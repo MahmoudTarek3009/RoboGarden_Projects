@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Grading and Attendance System</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        .jumbotron {
+            background-image: url('https://via.placeholder.com/1920x500.png?text=University+Image');
+            background-size: cover;
+            color: white;
+        }
+        .grid-item {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 15px;
+            font-size: 14px;
+            text-align: center;
+            margin: 5px;
+        }
+        .attendance-item {
+            background-color: #f0f8ff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+            width: 150px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        /* Navbar hover effect */
+        .nav-link:hover {
+            color: #007bff !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center">
+        <h1 class="display-4">University Grading & Attendance System</h1>
+        <p class="lead">Manage student grades and attendance efficiently</p>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">University System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#attendance">Attendance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#grades">Grade</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-us">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-us">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Grading System -->
+    <div id="grades" class="container my-5">
+        <h2 class="text-center">Student Grades</h2>
+        <div class="row">
+            <!-- Student Data Grid -->
+            <div class="col-md-2 grid-item">Name</div>
+            <div class="col-md-2 grid-item">Student ID</div>
+            <div class="col-md-2 grid-item">Year</div>
+            <div class="col-md-2 grid-item">GPA</div>
+            <div class="col-md-2 grid-item">Letter Grade</div>
+
+            <!-- Student Row 1 -->
+            <div class="col-md-2 grid-item">John Doe</div>
+            <div class="col-md-2 grid-item">1001</div>
+            <div class="col-md-2 grid-item">Sophomore</div>
+            <div class="col-md-2 grid-item">3.8</div>
+            <div class="col-md-2 grid-item">A</div>
+
+            <!-- Student Row 2 -->
+            <div class="col-md-2 grid-item">Jane Smith</div>
+            <div class="col-md-2 grid-item">1002</div>
+            <div class="col-md-2 grid-item">Junior</div>
+            <div class="col-md-2 grid-item">3.5</div>
+            <div class="col-md-2 grid-item">B+</div>
+
+            <!-- Student Row 3 -->
+            <div class="col-md-2 grid-item">Tom Brown</div>
+            <div class="col-md-2 grid-item">1003</div>
+            <div class="col-md-2 grid-item">Senior</div>
+            <div class="col-md-2 grid-item">3.2</div>
+            <div class="col-md-2 grid-item">B</div>
+
+            <!-- Student Row 4 -->
+            <div class="col-md-2 grid-item">Alice Green</div>
+            <div class="col-md-2 grid-item">1004</div>
+            <div class="col-md-2 grid-item">Freshman</div>
+            <div class="col-md-2 grid-item">2.9</div>
+            <div class="col-md-2 grid-item">C+</div>
+        </div>
+    </div>
+
+    <!-- Attendance System -->
+    <div id="attendance" class="container my-5">
+        <h2 class="text-center">Student Attendance</h2>
+        <div class="d-flex flex-wrap">
+            <div class="attendance-item">
+                <p>1001</p>
+                <p>Present</p>
+            </div>
+            <div class="attendance-item">
+                <p>1002</p>
+                <p>Absent</p>
+            </div>
+            <div class="attendance-item">
+                <p>1003</p>
+                <p>Present</p>
+            </div>
+            <div class="attendance-item">
+                <p>1004</p>
+                <p>Absent</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 University System. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

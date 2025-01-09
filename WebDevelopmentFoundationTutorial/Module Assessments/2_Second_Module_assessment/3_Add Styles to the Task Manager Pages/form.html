@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <style>
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            width: 100%; /* Full width of the page */
+        }
+
+        /* Styling for table, th (header), and td (data) */
+        table, th, td {
+            border: 1px solid black; /* Black border around the table, th, and td */
+        }
+
+        /* Padding and text alignment for th and td */
+        th, td {
+            padding: 15px;
+            text-align: left; /* Align text to the left */
+        }
+
+        /* Header styling */
+        th {
+            background-color: #4CAF50; /* Green background color for table headers */
+            color: white; /* White text color for headers */
+        }
+
+        /* Zebra striping effect for even rows */
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Light gray background for even rows */
+        }
+    </style>
+</head>
+<body>
+    <h1>Task List</h1>
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Status</th>
+            <th>Due Date</th>
+        </tr>
+        <tr>
+            <td>Complete Homework</td>
+            <td>In Progress</td>
+            <td>2025-01-10</td>
+        </tr>
+        <tr>
+            <td>Buy Groceries</td>
+            <td>Completed</td>
+            <td>2025-01-05</td>
+        </tr>
+        <tr>
+            <td>Clean the House</td>
+            <td>Not Started</td>
+            <td>2025-01-12</td>
+        </tr>
+    </table>
+</body>
+</html>

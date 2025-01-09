@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        .jumbotron {
+            background-image: url('https://via.placeholder.com/1920x500.png?text=Shopping+Website');
+            background-size: cover;
+            color: white;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        /* Navbar color change based on viewport */
+        @media (max-width: 400px) {
+            .navbar {
+                background-color: #f8d7da;
+            }
+        }
+        @media (min-width: 400px) and (max-width: 768px) {
+            .navbar {
+                background-color: #d4edda;
+            }
+        }
+        @media (min-width: 769px) {
+            .navbar {
+                background-color: #007bff;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to Our Shopping Website</h1>
+        <p class="lead">Your one-stop shop for all your needs</p>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">ShopLogo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Shopping Cards -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200.png?text=Product+1" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">$29.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200.png?text=Product+2" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <p class="card-text">$49.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200.png?text=Product+3" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 3</h5>
+                        <p class="card-text">$19.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Shopping Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
